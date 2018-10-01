@@ -1,0 +1,26 @@
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+  }
+  .rest {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+
+  }
+  .rest li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    margin: .5em;
+    padding: .3em 0;
+    border-radius: 4px;
+  }
+.interBtn a{
+  margin:2px
+}
+  .rest .text {
+    position: relative;
+    top: -3px;
+  }

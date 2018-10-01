@@ -1,0 +1,18 @@
+.navbar-nav {
+    display:table;
+    width:100%;
+    margin: 0;
+}
+.navbar-nav > li {
+    float:none;
+    display:table-cell;
+    text-align:center;
+}
+
+.bg-lightgray
+{
+    background-color:rgba(248, 232, 232, 0.55);
+}
+.fixed-bottom{
+border-top-width: 15px;
+}
