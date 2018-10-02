@@ -16,8 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routes } from './app.router';
 import { SearchComponent } from './home/search/search.component';
 
-import {ServiceService} from './home/search/service.service';
+import {ServiceService} from './home/search/service/service.service';
 import { FiltersPipe } from './shared/filters/filters.pipe';
+import { ShufflePipe } from './shared/filters/shuffle.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FiltersPipe } from './shared/filters/filters.pipe';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    FiltersPipe
+    FiltersPipe,
+    ShufflePipe
   ],
   imports: [
     BrowserModule,

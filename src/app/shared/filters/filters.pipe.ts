@@ -5,8 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FiltersPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(items: any[], callback: (item: any) => boolean): any {
+    if (!items || !callback) {
+      return items;
+    }
+    return items.filter(item => callback(item));
   }
 
 }
