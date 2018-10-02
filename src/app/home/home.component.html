@@ -1,29 +1,25 @@
-<div class="container-fluid text-center">    
+<div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
       <h3>Filters </h3>
-      <p> Table <mat-checkbox class="example-margin" [labelPosition]='before' [(ngModel)]="tableCheck" (change)="filterTable($event)" ></mat-checkbox>
-        </p>
-        <p> Chair <mat-checkbox class="example-margin" [labelPosition]='before'  [(ngModel)]="chairCheck" ></mat-checkbox>
-        </p>
-        <p> Tents <mat-checkbox class="example-margin" [labelPosition]='before'  [(ngModel)]="tentsCheck" ></mat-checkbox>
-        </p>
-        <button mat-stroked-button (click)="removeFilters()" >Remove Filters</button>
+      <p> Table <mat-checkbox class="example-margin" [labelPosition]='before' [(ngModel)]="tableCheck" (change)="filterTable($event)"></mat-checkbox>
+      </p>
+      <p> Chair <mat-checkbox class="example-margin" [labelPosition]='before' [(ngModel)]="chairCheck"></mat-checkbox>
+      </p>
+      <p> Tents <mat-checkbox class="example-margin" [labelPosition]='before' [(ngModel)]="tentsCheck"></mat-checkbox>
+      </p>
+      <button mat-stroked-button (click)="removeFilters()">Remove Filters</button>
 
     </div>
-    <div class="col-sm-8 "> 
-      <app-search
-  [tableFilter]="tableCheck"
-  [chairFilter]="chairCheck"
-  [tentsFilter]="tentsCheck" 
-      ></app-search>
+    <div class="col-sm-8 ">
+      <app-search [tableFilter]="tableCheck" [chairFilter]="chairCheck" [tentsFilter]="tentsCheck"></app-search>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p>ADS</p>
+        <p></p>
       </div>
       <div class="well">
-        <p>ADS</p>
+        <p></p>
       </div>
     </div>
   </div>

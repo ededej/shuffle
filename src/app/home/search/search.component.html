@@ -1,63 +1,57 @@
 <div class="row justify-content-center">
     <div class="col-12">
-
         <form class="card card-sm">
             <div class="col-sm-8 col-sm-offset-2">
-                <h2>Where you will like to shuffle?</h2>
+                <h3>Where would you like to shuffle?</h3>
             </div>
             <div class="card-body row no-gutters align-items-center">
                 <div class="col-auto">
                     <i class="fas fa-search h4 text-body"></i>
                 </div>
-                <!--end of col-->
                 <div class="col">
                     <input #searchInput class="form-control form-control-lg form-control-borderless" type="search"
                         placeholder="ZipCode">
                 </div>
-                <!--end of col-->
                 <div class="col-auto">
                     <button (click)="performSearch(searchInput)" class="btn btn-info btn-lg" type="button">
                         <i class="glyphicon glyphicon-search">Search</i>
                     </button>
                 </div>
-                <!--end of col-->
-
 
             </div>
         </form>
     </div>
-    <!--end of col-->
 </div>
 
 <ul class="rest">
-     <div class="card-colomn">
+    <div class="card-colomn">
 
-    <li *ngFor="let r of jsonDataDispaly">
-        <div class="card text-left">
-            <div class="card-header">
-                {{r.name}}
-            </div>
-            <div class="card-block">
-                <h4 class="card-title">{{r.category}} from {{r.company}}</h4>
-                <h5 class="card-title  text-center"> Price: {{r.price}}</h5>
+        <li *ngFor="let item of shuffleList | shuffle">
+            <div class="card text-left">
+                <div class="card-header">
+                    {{item.name}}
+                </div>
+                <div class="card-block">
+                    <h4 class="card-title">{{item.category}} from {{item.company}}</h4>
+                    <h5 class="card-title  text-center"> Price: {{item.price}}</h5>
 
-                <p class="card-text">Email: {{r.email}} Phone: {{r.phone}}</p>
-                <p class="card-text">Phone: {{r.phone}}</p>
-                <div class="card-text">
-                    <span>This item have been bought</span>
-                    <button mat-icon-button matBadge="8">
+                    <p class="card-text">Email: {{item.email}} Phone: {{item.phone}}</p>
+                    <p class="card-text">Phone: {{item.phone}}</p>
+                    <div class="card-text">
+                        <span>This item has been bought</span>
+                        <button mat-icon-button matBadge={{item.bought}}>
+                            <mat-icon>shopping_basket</mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" mat-raised-button>
                         <mat-icon>shopping_basket</mat-icon>
+                        Add to cart
                     </button>
                 </div>
             </div>
-        <div class="card-footer text-center">
-            <button class="btn btn-primary" mat-raised-button>
-                <mat-icon>shopping_basket</mat-icon>
-                Add to cart
-            </button>
-        </div>
-    </div>
 
-    </li>
+        </li>
     </div>
 </ul>
